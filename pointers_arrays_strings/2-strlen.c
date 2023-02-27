@@ -4,7 +4,6 @@
 
 /**
  * _strlen - Write a function that returns the length of a string
- * @lenght: charact
  * @s: character
  * Return: lenght
  */
