@@ -11,11 +11,11 @@
 {
 	char *p = s;
 
-		while (*p)
+		while (*p != '\0')
 		{
 			p++;
 		}
-		while (p >= s)
+		while (p >= s-1)
 			{
 			putchar(*p--);
 
