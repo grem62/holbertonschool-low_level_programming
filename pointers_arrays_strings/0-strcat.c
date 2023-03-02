@@ -2,7 +2,6 @@
 
 /**
  *_strcat - fonction
- *@ptr: character
  *@dest: character 2
  *@src: character 3
  *Return: concatened
