@@ -1,15 +1,21 @@
-#include <string.h>
+#include "main.h"
 
 /**
- *_memset - fonction
- *@s: character1
- *@b: character2
- *@n: character3
- *Return: return memset
-*/
+ * _memset - fonction fill memory
+ * @s: character
+ * @b: character1
+ * @n: character2
+ * Return: return the memory area filled
+ */
 
 char *_memset(char *s, char b, unsigned int n)
 {
+	unsigned int index;
 
-	return ((char *) memset(s, b, n));
+	for (index = 0; index < n; index++)
+	{
+		s[index] = b;
+	}
+
+	return (s);
 }
