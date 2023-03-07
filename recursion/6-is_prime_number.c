@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *is_find_number -fonction
+ *is_prime_number -fonction
  *@n: character
  *Return: 0 or 1
  */
@@ -12,5 +12,4 @@ int is_prime_number(int n)
 	return (0);
 
 		return (1);
-
 }
