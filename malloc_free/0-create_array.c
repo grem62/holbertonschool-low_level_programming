@@ -15,6 +15,10 @@
 	char *array;
 
 	array = malloc(size * sizeof(char));
+
+	if (size == 0)
+		return (NULL);
+
 	if (array == NULL)
 	return (NULL);
 
