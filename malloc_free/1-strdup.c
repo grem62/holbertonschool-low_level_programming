@@ -2,21 +2,29 @@
 #include <stdlib.h>
 #include <string.h>
 
-char* _strdup(char* str) 
+/**
+ *_strdup - fonction
+ *@str: character
+ *@*copy: character2
+ *Return: NULL
+ */
+
+
+	char *_strdup(char *str)
 {
 	char *copy;
-	
-	if (str == NULL) 
+
+	if (str == NULL)
 	{
-        return NULL;
-    	}
-    
-     copy = malloc(sizeof(char));
+		return (NULL);
+	}
+	copy = malloc(sizeof(char));
 
-    if (copy == NULL) 
-    
-        return NULL;
+	if (copy == NULL)
+		return (NULL);
 
-    strcpy(copy, str);
-    return copy;
+	strcpy(copy, str);
+
+	return (copy);
+	free(copy);
 }
