@@ -1,16 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - fonction
- *Return: 0
+ * main - fonction to print the name of the program
+ * @void: it takes not arguments
+ * Return: 0
  */
-
 
 int main(void)
 {
-	printf(" %s\n", __FILE__);
+	printf("%s\x0a", __FILE__);
 
-	return ('\n');
 	return (0);
 
 }
