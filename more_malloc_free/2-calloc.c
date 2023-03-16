@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * *_calloc - function 
+ *_calloc - function
  * @nmemb: character
  * @size: character 2
  * Return: 0
