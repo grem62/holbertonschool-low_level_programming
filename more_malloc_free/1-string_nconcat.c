@@ -1,48 +1,41 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
 
 /**
- *string_nconcat - fonction
- *@s1: CHARACTER 1
- *@s2: character 2
- *@n: character 2
- *Return: 0
+ * string_nconcat - concatenate s1 and n bytes of s2; return ptr to string
+ * @s1: string 1
+ * @s2: string 2
+ * @n: n bytes to concat from string 2
+ *
+ * Return: pointer to concatenated string
  */
 
-
-	char *string_nconcat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-
 	char *ptr;
-	int i = 0;
-	int j = 0;
-	int num = n;
-	int lenght;
-
-lenght = strlen(s1) + num + 1;
+	int num = n, length, index = 0, index2 = 0;
 
 	if (s1 == NULL)
-	s1 = "";
-
+		s1 = "";
 	if (s2 == NULL)
-	s2 = "";
+		s2 = "";
 
-	ptr = malloc(sizeof(*ptr) * lenght);
+	length = strlen(s1) + num + 1;
+
+	ptr = malloc(sizeof(*ptr) * length);
 
 	if (ptr == NULL)
 		return (NULL);
 
-	for (; s1[i] != '\0'; i++)
+	for (; s1[index] != '\0'; index++)
+		ptr[index] = s1[index];
 
-		ptr[i] = s1[i];
+	for (; index2 < num; index2++)
+		ptr[index + index2] = s2[index2];
 
-	for (; j < num; j++)
-	ptr[i + j] = s2[j];
+	ptr[index + index2] = '\0';
 
-	ptr[i + j] = '\0';
-
-	return (ptr);
+return (ptr);
 }
-
