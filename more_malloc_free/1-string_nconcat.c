@@ -38,7 +38,7 @@ lenght = strlen(s1) + num + 1;
 
 		ptr[i] = s1[i];
 
-	for (; s2[j] < num; j++)
+	for (; j < num; j++)
 	ptr[i + j] = s2[j];
 
 	ptr[i + j] = '\0';
