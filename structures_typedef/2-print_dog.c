@@ -4,7 +4,7 @@
 
 /**
  *print_dog - fonction
- *@d: character
+ *@d: character1
  */
 
 	void print_dog(struct dog *d)
