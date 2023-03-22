@@ -2,14 +2,17 @@
 #include <stdlib.h>
 #include "function_pointers.h"
 
-/*
- *
- *
- *
+/**
+ *int_index - fonction searche for an integer
+ *@array: tableau
+ *@size: taille
+ *@cmp: pointeur
+ *Return: return
  */
 
+
 	int int_index(int *array, int size, int (*cmp)(int))
-{	
+{
 	int index = 0;
 
 	if (size <= 0)
