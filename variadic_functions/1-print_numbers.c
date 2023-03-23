@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * print_numbers - main function that print numbers
+ * print_numbers - main function that print number
  * @separator: string that separate beetwen two int
  * @n: variables stocked
 */
