@@ -3,29 +3,29 @@
 /**
  *add_dnodeint - function add a node begining of the list
  *@head: head of the lists
- *Return: return new node
+ *Return: return new nodes
  *@n: value
 */
+
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *new_node;
+	dlistint_t *new_nodes;
 
-	if (!head)
+	if (head == NULL)
 		return (NULL);
 
-	new_node = malloc(sizeof(dlistint_t));
+	new_nodes = malloc(sizeof(dlistint_t));
 
-	if (!new_node)
+	if (!new_nodes)
 		return (NULL);
 
-		new_node->n = n;
-		new_node->next = (*head);
-		new_node->prev = NULL;
+	new_nodes->n = n;
+	new_nodes->next = *head;
+	new_nodes->prev = NULL;
 
+	if (*head != NULL)
+		(*head)->prev = new_nodes;
+	*head = new_nodes;
 
-	if (*head)
-		(*head)->prev = new_node;
-
-	(*head) = new_node;
-	return (new_node);
+	return (new_nodes);
 }
