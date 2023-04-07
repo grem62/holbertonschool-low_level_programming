@@ -1,19 +1,22 @@
 #include "lists.h"
 
 /**
- *free_dlistint - fontion free the memory of head
- *@head: head of list
+ *free_list - fonction free all lists
+ *@head: head of the chaine
 */
-void free_dlistint(dlistint_t *head)
+
+void free_list(list_t *head)
+
 {
-	dlistint_t *tmp = NULL;
+	list_t *current;
 
-	while (!head)
+	current = head;
+
+	list_t *new;
+
+	while (current)
 	{
-
-	*tmp = *head->next;
-	free(head->next);
-	free(head);
-	head = tmp;
+	current = new->next;
+	free(current);
 	}
 }
