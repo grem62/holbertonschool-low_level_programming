@@ -5,18 +5,16 @@
  *@head: head of the chaine
 */
 
-void free_list(list_t *head)
+void free_dlistint(dlistint_t *head)
 
 {
-	list_t *current;
-
-	current = head;
-
-	list_t *new;
+	dlistint_t *current = head;
 
 	while (current)
 	{
-	current = new->next;
-	free(current);
+		dlistint_t *next = current->next;
+
+		free(current);
+		current = next;
 	}
 }
