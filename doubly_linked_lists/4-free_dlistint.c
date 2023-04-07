@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- *free_list - fonction free all lists
+ *free_dlistint - fonction free all lists
  *@head: head of the chaine
 */
 
